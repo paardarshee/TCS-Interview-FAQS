@@ -17,7 +17,7 @@ async function getFAQs() {
 
 export default async function Page() {
 	// increment once per page request
-	// await incrementSiteVisit();
+	await incrementSiteVisit();
 
 	const [faqs, visits] = await Promise.all([getFAQs(), getSiteVisits()]);
 

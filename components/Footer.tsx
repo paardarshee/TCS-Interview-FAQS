@@ -7,7 +7,7 @@ export default function Footer() {
         bg-white/90 dark:bg-zinc-950/90 backdrop-blur
       "
 		>
-			<div className="max-w-4xl mx-auto px-4 py-3 text-center space-y-1">
+			<div className="max-w-4xl mx-auto px-4 py-1.5 text-center space-y-1">
 				{/* Attribution */}
 				<p className="text-sm text-gray-600 dark:text-gray-400">
 					Developed by{" "}
