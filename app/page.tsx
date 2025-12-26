@@ -1,5 +1,6 @@
 import FAQWithSearch from "@/components/FAQWithSearch";
 import AddQuestion from "@/components/AddQuestion";
+import { incrementSiteVisit, getSiteVisits } from "@/lib/siteVisits";
 
 async function getFAQs() {
 	const homeRoute =
@@ -15,29 +16,44 @@ async function getFAQs() {
 }
 
 export default async function Page() {
-	const faqs = await getFAQs();
+	// increment once per page request
+	// await incrementSiteVisit();
+
+	const [faqs, visits] = await Promise.all([getFAQs(), getSiteVisits()]);
 
 	return (
 		<main className="max-w-5xl mx-auto px-4">
-			{/* Page Header */}
-			<header className="mt-6 mb-6 text-center">
+			{/* Header */}
+			<header className="mt-6 mb-6 text-center space-y-2">
 				<h1 className="text-3xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
 					Frequently Asked Questions
 				</h1>
-				<p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+
+				<p className="text-sm text-gray-500 dark:text-gray-400">
 					Everything you need to know
 				</p>
+
+				{/* Visit counter */}
+				{/* Visit counter */}
+				<div
+					className="inline-flex items-center gap-2 rounded-full
+                border border-gray-200 dark:border-zinc-800
+                bg-gray-50 dark:bg-zinc-900
+                px-3 py-1 text-xs
+                text-gray-600 dark:text-gray-400"
+				>
+					<span className="text-orange-500">●</span>
+					<span>{visits.toLocaleString()} total visits</span>
+				</div>
 			</header>
 
-			{/* Admin Action */}
-			<section className="mb-8">
+			{/* Admin action */}
+			<section className="mb-6">
 				<AddQuestion />
 			</section>
 
-			{/* FAQ Content */}
-			<section>
-				<FAQWithSearch faqs={faqs} />
-			</section>
+			{/* Content */}
+			<FAQWithSearch faqs={faqs} />
 		</main>
 	);
 }
