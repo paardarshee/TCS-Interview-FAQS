@@ -15,9 +15,9 @@
             "question": "Who handles the username paardarshee",
             "options": [
                 "Niraj Modi",
-                "Bishal Bhattacharjee",
-                "Jayanta Pandit",
-                "Anirban Sinha"
+                "Tony Stark",
+                "Steve Rogers",
+                "Bruce Wayne"
             ],
             "answer": "Niraj Modi"
         },
@@ -34,25 +34,29 @@
         },
         {
             "id": "c5",
-            "question": "Where did paardarshee complete his graduation?",
-            "options": [
-                "Asansol Engineering College",
-                "Techno Main Salt lake",
-                "Dr B.C. Roy Engineering College",
-                "IIT Bombay"
-            ],
-            "answer": "Asansol Engineering College"
+            "question": "Type the word 'I will Crack the offer'",
+            "answer": "I will Crack the offer"
         },
         {
             "id": "c6",
-            "question": "Which TCS offer do paardarshee have?",
+            "question": "Which is the highest paying role among the following?",
             "options": [
                 "Prime",
                 "Ninja",
-                "Digital",
-                "No offer"
+                "Digital"
             ],
             "answer": "Prime"
+        },
+        {
+            "id": "c7",
+            "question": "Who is CEO of TCS?",
+            "options": [
+                "K. Krithivasan",
+                "Rajesh Gopinathan",
+                "Natarajan Chandrasekaran",
+                "C Vijayakumar"
+            ],
+            "answer": "K. Krithivasan"
         }
     ]
 }
