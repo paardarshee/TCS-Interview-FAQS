@@ -56,7 +56,7 @@ export default async function Page() {
 			</header>
 
 			{/* Admin action */}
-			<section className="mb-6 flex justify-center">
+			<section className="mb-6">
 				{/* check for auth token from http-only cookie if present show AddQuestion else just a plus button on clicking it there will be a popup created with asking name, email, and fetches /api/login and share the question */}
 				{isAuthenticated && <AddQuestion />}
 				{!isAuthenticated && <SignUpGate />}

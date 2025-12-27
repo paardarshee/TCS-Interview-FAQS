@@ -91,14 +91,16 @@ export default function SignUpGate() {
 	return (
 		<>
 			{/* Trigger Button */}
-			<button
-				onClick={handleOpen}
-				className="rounded-lg bg-orange-500 px-4 py-2
-                   text-xs font-medium text-white
-                   hover:bg-orange-600"
-			>
-				Add new Question
-			</button>
+			<div className="flex justify-center">
+				<button
+					onClick={handleOpen}
+					className="rounded-lg bg-orange-500 px-4 py-2
+				text-xs font-medium text-white
+				hover:bg-orange-600"
+				>
+					Add new Question
+				</button>
+			</div>
 
 			{/* Modal */}
 			{open && (

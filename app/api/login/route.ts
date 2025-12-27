@@ -15,7 +15,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-	const { answer, id, mail, name } = await request.json();
+	const { answer, id, email, name } = await request.json();
 	const challenge = data.challanges.find((c) => c.id === id);
 
 	if (!challenge) {
@@ -28,9 +28,9 @@ export async function POST(request: Request) {
 		return Response.json({ success: false, message: "Incorrect answer" });
 	}
 	await connectDB();
-	let user = await User.findOne({ email: mail });
+	let user = await User.findOne({ email });
 	if (!user) {
-		user = new User({ name, email: mail });
+		user = new User({ name, email });
 		await user.save();
 	}
 
