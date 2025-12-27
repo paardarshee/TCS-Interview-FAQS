@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 			"FAQs and preparation guidance for TCS Ninja, Digital, and Prime interviews based on real candidate experience.",
 		images: [
 			{
-				url: "public/og-image.jpeg",
+				url: "https://raw.githubusercontent.com/paardarshee/TCS-Interview-FAQS/refs/heads/main/public/og-image.jpeg",
 				alt: "TCS Interview FAQs - Ninja, Digital & Prime Preparation",
 			},
 		],
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
 			"Real TCS interview FAQs and preparation insights for Ninja, Digital, and Prime roles.",
 		images: [
 			{
-				url: "public/og-image.jpeg",
+				url: "https://raw.githubusercontent.com/paardarshee/TCS-Interview-FAQS/refs/heads/main/public/og-image.jpeg",
 				alt: "TCS Interview FAQs - Ninja, Digital & Prime Preparation",
 			},
 		],
