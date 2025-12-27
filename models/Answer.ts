@@ -2,11 +2,6 @@ import { Schema, model, models } from "mongoose";
 
 const AnswerSchema = new Schema(
 	{
-		answer_id: {
-			type: String,
-			required: true,
-			unique: true,
-		},
 		question_id: {
 			type: Schema.Types.ObjectId,
 			ref: "Question",

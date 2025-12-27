@@ -1,9 +1,58 @@
 {
-    "faqs": [
+    "challanges": [
         {
-            "id": "1",
-            "question": "What is Next.js?",
-            "answer": "Next.js is a React framework for production."
+            "id": "c1",
+            "question": "What is 7 + 5?",
+            "answer": "12"
+        },
+        {
+            "id": "c2",
+            "question": "Type the word 'human'",
+            "answer": "human"
+        },
+        {
+            "id": "c3",
+            "question": "Who handles the username paardarshee",
+            "options": [
+                "Niraj Modi",
+                "Bishal Bhattacharjee",
+                "Jayanta Pandit",
+                "Anirban Sinha"
+            ],
+            "answer": "Niraj Modi"
+        },
+        {
+            "id": "c4",
+            "question": "What is the capital of India?",
+            "options": [
+                "Mumbai",
+                "Chennai",
+                "New Delhi",
+                "Kolkata"
+            ],
+            "answer": "New Delhi"
+        },
+        {
+            "id": "c5",
+            "question": "Where did paardarshee complete his graduation?",
+            "options": [
+                "Asansol Engineering College",
+                "Techno Main Salt lake",
+                "Dr B.C. Roy Engineering College",
+                "IIT Bombay"
+            ],
+            "answer": "Asansol Engineering College"
+        },
+        {
+            "id": "c6",
+            "question": "Which TCS offer do paardarshee have?",
+            "options": [
+                "Prime",
+                "Ninja",
+                "Digital",
+                "No offer"
+            ],
+            "answer": "Prime"
         }
     ]
 }

@@ -1,6 +1,8 @@
 import FAQWithSearch from "@/components/FAQWithSearch";
 import AddQuestion from "@/components/AddQuestion";
+import SignUpGate from "@/components/SignUpGate";
 import { incrementSiteVisit, getSiteVisits } from "@/lib/siteVisits";
+import { cookies } from "next/headers";
 
 async function getFAQs() {
 	const homeRoute =
@@ -15,9 +17,15 @@ async function getFAQs() {
 	return res.json();
 }
 
+const inProduction = process.env.NODE_ENV === "production";
 export default async function Page() {
 	// increment once per page request
-	await incrementSiteVisit();
+	if (inProduction) {
+		await incrementSiteVisit();
+	}
+	const cookieStore = await cookies();
+	const authToken = cookieStore.get("auth_token"); // your http-only cookie
+	const isAuthenticated = Boolean(authToken);
 
 	const [faqs, visits] = await Promise.all([getFAQs(), getSiteVisits()]);
 
@@ -48,8 +56,10 @@ export default async function Page() {
 			</header>
 
 			{/* Admin action */}
-			<section className="mb-6">
-				<AddQuestion />
+			<section className="mb-6 flex justify-center">
+				{/* check for auth token from http-only cookie if present show AddQuestion else just a plus button on clicking it there will be a popup created with asking name, email, and fetches /api/login and share the question */}
+				{isAuthenticated && <AddQuestion />}
+				{!isAuthenticated && <SignUpGate />}
 			</section>
 
 			{/* Content */}

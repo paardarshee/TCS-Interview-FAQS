@@ -2,11 +2,6 @@ import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema(
 	{
-		user_id: {
-			type: String,
-			required: true,
-			unique: true,
-		},
 		name: {
 			type: String,
 			trim: true,
@@ -21,5 +16,7 @@ const UserSchema = new Schema(
 	},
 	{ timestamps: true }
 );
+
+UserSchema.index({ "otp.expiresAt": 1 }, { expireAfterSeconds: 0 });
 
 export const User = models.User || model("User", UserSchema);
