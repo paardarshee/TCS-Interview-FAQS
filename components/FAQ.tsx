@@ -40,14 +40,14 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
 								{/* Icon */}
 								<span
 									className={`
-                    flex h-7 w-7 items-center justify-center rounded-full border
-                    transition-transform
-                    ${
-											isOpen
-												? "rotate-180 border-orange-400/50 bg-orange-50 dark:bg-orange-500/10"
-												: "border-gray-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
-										}
-                  `}
+      flex-none flex h-7 w-7 items-center justify-center
+      rounded-full border transition-transform cursor-pointer
+      ${
+				isOpen
+					? "rotate-180 border-orange-400/50 bg-orange-50 dark:bg-orange-500/10"
+					: "border-gray-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
+			}
+    `}
 								>
 									<svg
 										className="h-3.5 w-3.5 text-orange-500"

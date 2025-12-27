@@ -33,7 +33,7 @@ export async function GET() {
 		.where("answer")
 		.ne(null)
 		.select("question answer")
-		.sort({ createdAt: 1 });
+		.sort({ createdAt: -1 });
 
 	return Response.json(faqs);
 }
