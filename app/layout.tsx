@@ -51,10 +51,17 @@ export const metadata: Metadata = {
 		type: "website",
 		locale: "en_US",
 		url: "https://tcs-interview-faqs.vercel.app",
+
 		siteName: "TCS Interview FAQs",
 		title: "TCS Interview FAQs | Ninja, Digital & Prime",
 		description:
 			"FAQs and preparation guidance for TCS Ninja, Digital, and Prime interviews based on real candidate experience.",
+		images: [
+			{
+				url: "public/og-image.jpeg",
+				alt: "TCS Interview FAQs - Ninja, Digital & Prime Preparation",
+			},
+		],
 	},
 
 	twitter: {
@@ -62,6 +69,12 @@ export const metadata: Metadata = {
 		title: "TCS Interview FAQs",
 		description:
 			"Real TCS interview FAQs and preparation insights for Ninja, Digital, and Prime roles.",
+		images: [
+			{
+				url: "public/og-image.jpeg",
+				alt: "TCS Interview FAQs - Ninja, Digital & Prime Preparation",
+			},
+		],
 	},
 
 	robots: {
