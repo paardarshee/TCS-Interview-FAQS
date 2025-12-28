@@ -139,7 +139,17 @@ export default function Markdown({ content }: Props) {
 						</li>
 					);
 				}
-
+				// Blockquote
+				if (line.startsWith("> ")) {
+					return (
+						<blockquote
+							key={index}
+							className="border-l-4 border-orange-400 pl-4 italic text-gray-700 dark:text-gray-300"
+						>
+							{parseInline(line.replace("> ", ""))}
+						</blockquote>
+					);
+				}
 				// Empty line
 				if (!line.trim()) {
 					return <div key={index} />;
